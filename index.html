@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <title>Basic Calculator</title>
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Great+Vibes&display=swap">
+    <!-- Google icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+
+    <!--CSS Stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1 class="heading"> Basic Calculator </h1>
+
+
+    <div class="calculatorContainer">
+        <div class="inputContainer">
+            <input type="number" name="Input1" id="Input1" placeholder="Enter first number" min="0"> <br>
+            <span id="operator"></span> <br>
+            <input type="number" name="Input2" id="Input2" placeholder="Enter second number" min="0">
+        </div>
+
+
+        <div class="btnContainer">
+            <div class="sumSubContainer">
+                <button id="calculate_sum">Addition</button> <br>
+                <button id="calculate_subtract"> Subtraction </button> <br>
+            </div>
+            <div class="multiDivContainer">
+                <button id="calculate_multiplication">Multiplication </button> <br>
+                <button id="calculate_division">Division</button> <br>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="resultScreen"></h2>
+
+    <!-- JAVASCRIPT  -->
+    <script>
+        const Input1 = document.getElementById("Input1");
+        const Input2 = document.getElementById("Input2");
+        const calculateSum = document.getElementById("calculate_sum");
+        const calculateSubtract = document.getElementById("calculate_subtract");
+        const calculateMultiplication = document.getElementById("calculate_multiplication");
+        const calculateDivision = document.getElementById("calculate_division");
+        const resultScreen = document.getElementById("resultScreen")
+
+        calculateSum.onclick = function () {
+            let num1 = Number(Input1.value);
+            let num2 = Number(Input2.value);
+            let result = num1 + num2;
+            // window.alert(`The sum of ${num1} and ${num2} is ${result}.`)
+            window.alert(`${num1} + ${num2} = ${result}`)
+
+
+        }
+
+        calculateSubtract.onclick = function () {
+            let num1 = Number(Input1.value);
+            let num2 = Number(Input2.value);
+            let result = num1 - num2;
+            // window.alert(`The result is ${result}.`)
+            window.alert(`${num1} - ${num2} = ${result}`)
+        }
+
+
+        calculateMultiplication.onclick = function () {
+            let num1 = Number(Input1.value);
+            let num2 = Number(Input2.value);
+            let result = num1 * num2;
+            // window.alert(`The multiplication of ${num1} and ${num2} is ${result}.`)
+            window.alert(`${num1} x ${num2} = ${result}`)
+        }
+
+        calculateDivision.onclick = function () {
+            let num1 = Number(Input1.value);
+            let num2 = Number(Input2.value);
+            let result = num1 / num2;
+            // window.alert(`The result is ${result}, when dividing ${num1} by ${num2}.`)
+            window.alert(`${num1} / ${num2} = ${result}`)
+        }
+
+
+    </script>
+
+</body>
+
+</html>
